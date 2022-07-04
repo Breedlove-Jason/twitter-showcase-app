@@ -1,7 +1,6 @@
 import React from "react";
 import "./Posts.styles.css";
 import Avatar from "@material-ui/core/Avatar";
-import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -26,16 +25,17 @@ function Posts({ displayName, username, verified, text, image, avatar, time }) {
                 <img
                   className={"verifiedButton"}
                   src={require("./icons8-verified-badge-100.png")}
+                  alt={"Verified"}
                 />
-                {/*<VerifiedUserIcon />*/}@{"JBreedloveDev"}
+                @{"JBreedloveDev"}
               </span>
             </h3>
           </div>
           <div className="posts__headerDescription">
-            <p>Lorem ipsum dolor sit amet</p>
+            <p>This is a sample tweet to test functionality</p>
           </div>
         </div>
-        <img src={"https://via.placeholder.com/350x150"} />
+        <img src={"https://via.placeholder.com/350x150"} alt={"Placeholder"} />
         <div className="posts__footer">
           <ChatBubbleOutlineIcon fontSize={"small"} />
           <RepeatIcon fontSize={"small"} />
