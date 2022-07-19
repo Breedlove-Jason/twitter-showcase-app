@@ -6,33 +6,31 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PublishIcon from "@mui/icons-material/Publish";
 
-function Posts({ displayName, username, verified, text, image, avatar, time }) {
+function Posts({ displayName, username, verified, text, image, avatar }) {
   return (
     <div className={"posts"}>
       <div className={"posts__avatar"}>
-        <Avatar
-          src={
-            "https://imgs.search.brave.com/9Wr-yBXvYvhITEBALrq9egm9qrBDp3BcaV_FW5Yuloo/rs:fit:300:300:1/g:ce/aHR0cDovL3dvcmto/b3VuZC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTcvMDUv/cGxhY2Vob2xkZXIt/cHJvZmlsZS1waWMu/cG5n"
-          }
-        />
+        <Avatar src={avatar} />
       </div>
       <div className={"posts__body"}>
         <div className={"posts__header"}>
           <div className="posts_headerText">
             <h3>
-              Jason Breedlove{" "}
+              {displayName}{" "}
               <span className={"posts__headerSpecial"}>
-                <img
-                  className={"verifiedButton"}
-                  src={require("./icons8-verified-badge-100.png")}
-                  alt={"Verified"}
-                />
-                @{"JBreedloveDev"}
+                {verified && (
+                  <img
+                    className={"verifiedButton"}
+                    src={require("./twitterVerified.png")}
+                    alt={"Verified"}
+                  />
+                )}{" "}
+                @{username}
               </span>
             </h3>
           </div>
           <div className="posts__headerDescription">
-            <p>This is a sample tweet to test functionality</p>
+            <p>{text}</p>
           </div>
         </div>
         <img src={"https://via.placeholder.com/350x150"} alt={"Placeholder"} />
